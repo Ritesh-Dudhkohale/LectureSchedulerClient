@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class AdminService {
   constructor(private http: HttpClient) {}
 
-  private base_url = 'http://localhost:8080/api/admins';
+  private base_url = 'https://lectureschedulerserver.onrender.com/api/admins';
 
   getAllIngetstructors() {
     return this.http.get(`${this.base_url}/instructors`);
