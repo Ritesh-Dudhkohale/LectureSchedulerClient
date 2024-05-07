@@ -11,7 +11,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  private base_url = 'http://localhost:8080/api/users';
+  private base_url = 'https://lectureschedulerserver.onrender.com/api/users';
 
   registerUser(data: any) {
     return this.http.post(this.base_url + '/register', data);
