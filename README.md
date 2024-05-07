@@ -13,7 +13,7 @@ This module is designed to streamline the process of scheduling lectures and pro
 
 Here's a list of routes and links for accessing various functionalities of the Lecture Scheduling Module:
 
-Dashboard Page: <a href="https://lectureschedulerclient.onrender.com">Lecture Scheduling Module</a> 
+Dashboard Page: <a target="__blank" href="https://lectureschedulerclient.onrender.com">Lecture Scheduling Module</a> 
 
 ### Authentication
 
