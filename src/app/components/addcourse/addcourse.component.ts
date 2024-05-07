@@ -40,15 +40,14 @@ export class AddcourseComponent {
     }
     const { name, level, description, image } = this.courseForm.value;
 
-    // const formData = new FormData();
-    // formData.append('name', name);
-    // formData.append('level', level);
-    // formData.append('description', description);
-    // formData.append('image', image);
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('level', level);
+    formData.append('description', description);
+    formData.append('image', image);
 
     
-    const formData = new FormData(this.ngForm?.nativeElement);
-console.log(formData);
+  console.log(formData);
 
     this.courseService.createCourse(formData).subscribe({
       next: (res: any) => {

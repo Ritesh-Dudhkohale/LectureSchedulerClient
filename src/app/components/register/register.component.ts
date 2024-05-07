@@ -31,5 +31,14 @@ export class RegisterComponent {
     confirmPassword: ['', Validators.required],
   });
 
-  registerUser() {}
+  registerUser() {
+    this.auth.registerUser(this.registerData).subscribe({
+      next: (res) => {
+        this.router.navigateByUrl('/login');
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
+  }
 }
