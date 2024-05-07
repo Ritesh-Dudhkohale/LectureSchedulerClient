@@ -1,0 +1,40 @@
+
+header {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(119, 119, 245);
+}
+
+button {
+    padding: 10px 20px;
+    float: right;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profileContainer {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.courseContainer {
+    display: flex;
+}
+
+.courseheader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.courseheader button {
+    float: none;
+    margin-right: 20px;
+}

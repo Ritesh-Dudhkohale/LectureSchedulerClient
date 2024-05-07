@@ -1,0 +1,25 @@
+<div class="scheduleContainer">
+  <h2>My Schedules</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Course Name</th>
+        <th>Instructor Name</th>
+        <th>Level</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(schedule of schedules;let i=$index;track schedule.course._id;) {
+      <tr>
+        <td>{{ i + 1 }}</td>
+        <td>{{ schedule.course.name }}</td>
+        <td>{{ schedule.instructor.fullname }}</td>
+        <td>{{ schedule.course.level }}</td>
+        <td>{{ schedule.date | date }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

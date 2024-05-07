@@ -1,0 +1,9 @@
+<div class="card">
+  <img [src]="course.image" alt="{{ course.name }}" class="card-image" />
+  <div class="card-content">
+    <h2 class="card-title">Name : {{ course.name }}</h2>
+    <p class="card-level">Level: {{ course.level }}</p>
+    <p class="card-description">Description: {{ course.description }}</p>
+    <button (click)="assignLecture()">Assign Lecture</button>
+  </div>
+</div>

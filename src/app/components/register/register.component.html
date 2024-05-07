@@ -1,0 +1,62 @@
+<article class="container">
+  <h1>Register</h1>
+  <form [formGroup]="registerData" (ngSubmit)="registerUser()">
+    <div>
+      <label for="fullname">Full Name</label>
+      <input
+        type="text"
+        id="fullname"
+        placeholder="John Doe"
+        formControlName="fullname"
+      />
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input
+        type="text"
+        id="email"
+        placeholder="johndoe@gmail.com"
+        formControlName="email"
+      />
+    </div>
+    <div class="radiobtn">
+      <label for="role">Role</label>
+      <div>
+        <input
+          type="radio"
+          id="instructor"
+          formControlName="role"
+          value="instructor"
+        />
+        <label for="instructor">Instructor</label>
+
+        <input type="radio" id="admin" formControlName="role" value="admin" />
+        <label for="admin">Admin</label>
+      </div>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input
+        type="text"
+        id="password"
+        placeholder="john***"
+        formControlName="password"
+      />
+    </div>
+    <div>
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        type="text"
+        id="confirmPassword"
+        placeholder="john***"
+        formControlName="confirmPassword"
+      />
+    </div>
+    <div>
+      <button type="submit" [disabled]="registerData.invalid">Register</button>
+      <p class="registerbtn">
+        Already a member? <a routerLink="/login">Login</a>
+      </p>
+    </div>
+  </form>
+</article>

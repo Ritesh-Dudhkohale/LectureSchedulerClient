@@ -1,0 +1,89 @@
+.container {}
+
+header {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(119, 119, 245);
+}
+
+button {
+    padding: 10px 20px;
+    float: right;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profileContainer {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scheduleContainer {
+    width: 70%;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scheduleContainer h2 {
+    text-align: center;
+    margin: 5px auto;
+}
+
+.scheduleContainer p {
+    margin-bottom: 10px;
+}
+
+.scheduleContainer table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.scheduleContainer th,
+.scheduleContainer td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.scheduleContainer th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.scheduleContainer tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.scheduleContainer tr:hover {
+    background-color: #f2f2f2;
+}
+
+.scheduleContainer th:first-child,
+.scheduleContainer td:first-child {
+    border-left: none;
+}
+
+.scheduleContainer th:last-child,
+.scheduleContainer td:last-child {
+    border-right: none;
+}
+
+.scheduleContainer th:nth-child(2),
+.scheduleContainer td:nth-child(2) {
+    text-align: center;
+}
+
+.scheduleContainer th:nth-child(3),
+.scheduleContainer td:nth-child(3) {
+    text-align: center;
+}

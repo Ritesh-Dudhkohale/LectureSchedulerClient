@@ -1,0 +1,29 @@
+<article class="container">
+  <header>
+    <h1>{{ currentUser.role | uppercase }} Panel</h1>
+    <button (click)="logoutUser()">Logout</button>
+  </header>
+  <div class="profileContainer">
+    <h3>Profile</h3>
+    @if(currentUser) {
+    <div>Full Name :- {{ currentUser.fullname }}</div>
+    <div>Email :- {{ currentUser.email }}</div>
+    <div>Role :- {{ currentUser.role }}</div>
+    }
+  </div>
+  <div class="courseheader">
+    <h1>All Course</h1>
+    <button routerLink="/addcourse">Add Course</button>
+  </div>
+  <div class="courseContainer">
+    @for(course of allCourses;track course.name){
+    <app-coursecard [course]="course"></app-coursecard>
+    }
+  </div>
+
+  <div class="schedulecontainer">
+  
+    <app-schedule [schedules]="schedules"></app-schedule>
+    
+  </div>
+</article>

@@ -1,0 +1,29 @@
+<article class="container">
+  <h1>Login</h1>
+  <form [formGroup]="loginData" (ngSubmit)="loginUser()">
+    <div>
+      <label for="email">Email</label>
+      <input
+        type="text"
+        id="email"
+        placeholder="johndoe@gmail.com"
+        formControlName="email"
+      />
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input
+        type="text"
+        id="password"
+        placeholder="john***"
+        formControlName="password"
+      />
+    </div>
+    <div>
+      <button type="submit" [disabled]="loginData.invalid">Login</button>
+      <p class="registerbtn">
+        Not a member? <a routerLink="/register">Register</a>
+      </p>
+    </div>
+  </form>
+</article>
