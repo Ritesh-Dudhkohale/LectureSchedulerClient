@@ -1,27 +1,49 @@
-# Client
+# Lecture Scheduling Module
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+Welcome to the Lecture Scheduling Module! This module provides functionalities for scheduling and managing lectures in an educational institution.
 
-## Development server
+## Project Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This module is designed to streamline the process of scheduling lectures and providing a seamless experience for both instructors and students. It offers features such as:
 
-## Code scaffolding
+- **Lecture Scheduling**: Schedule lectures for different courses and subjects.
+- **User Authentication**: Secure login system for instructors, students, and administrators.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Routes/Links
 
-## Build
+Here's a list of routes and links for accessing various functionalities of the Lecture Scheduling Module:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Dashboard Page: https://lectureschedulerclient.onrender.com
 
-## Running unit tests
+### Authentication
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **/login**: Endpoint for user login.
+- **/register**: Endpoint for user registration.
 
-## Running end-to-end tests
+### Lecture Management
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **/lectures**: View all scheduled lectures.
 
-## Further help
+### Courses Management
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- **/courses**: View all available resources.
+
+### Instructor Management
+
+- **/instructors**: View all available instructors.
+- **/instructors/schedule** : Schedule lecture for instructor. 
+
+## Getting Started
+
+To get started with the Lecture Scheduling Module, follow these steps:
+
+1. Clone this repository to your local machine.
+2. Install dependencies using `npm install`.
+3. Set up your environment variables.
+4. Start the server using `npm start`.
+5. Access the application through the provided routes/links.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
