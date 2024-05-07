@@ -7,8 +7,7 @@ import { Injectable } from '@angular/core';
 export class InstructorService {
   constructor(private http: HttpClient) {}
 
-  private base_url =
-    'https://lectureschedulerserver.onrender.com/api/instructors/schedule';
+  private base_url = 'https://lectureschedulerserver.onrender.com/api/instructors/schedule';
 
   getMyScheduleService() {
     return this.http.get(this.base_url);
