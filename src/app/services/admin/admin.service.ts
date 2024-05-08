@@ -26,7 +26,7 @@ export class AdminService {
   }
 
   assignLecture(data: any) {
-    return this.http.get(`${this.base_url}/lectures`);
+    return this.http.post(`${this.base_url}/lectures`, data);
   }
 
   getAllSchedule() {

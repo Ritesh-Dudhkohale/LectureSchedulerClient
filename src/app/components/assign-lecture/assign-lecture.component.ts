@@ -1,18 +1,14 @@
 import { CommonModule, DatePipe, UpperCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { AdminService } from '../../services/admin/admin.service';
-import {
-  FormBuilder,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-assign-lecture',
   standalone: true,
   providers: [DatePipe, UpperCasePipe],
-  imports: [CommonModule, ReactiveFormsModule,RouterLink],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink],
   templateUrl: './assign-lecture.component.html',
   styleUrl: './assign-lecture.component.css',
 })
@@ -23,6 +19,7 @@ export class AssignLectureComponent {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private admin: AdminService,
     private fb: FormBuilder,
     private datePipe: DatePipe
@@ -70,12 +67,15 @@ export class AssignLectureComponent {
 
   assignLecture() {
     const { instructorID, date } = this.assignLectureForm.value;
-    console.log(this.courseID, instructorID, date);
     this.admin
       .assignLecture({ courseID: this.courseID, instructorID, date })
       .subscribe({
         next: (res) => {
           console.log(res);
+          this.router.navigateByUrl('/admin');
+        },
+        error: (err) => {
+          console.log(err);
         },
       });
   }
