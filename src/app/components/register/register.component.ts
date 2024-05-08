@@ -32,12 +32,14 @@ export class RegisterComponent {
   });
 
   registerUser() {
-    this.auth.registerUser(this.registerData).subscribe({
+    this.auth.registerUser(this.registerData.value).subscribe({
       next: (res) => {
+        alert('Rgistration is done,click ok to to go login');
         this.router.navigateByUrl('/login');
       },
       error: (err) => {
         console.log(err);
+        alert(`Registration failed :- ${err.error.message}`);
       },
     });
   }

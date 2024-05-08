@@ -17,7 +17,7 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class AddcourseComponent {
   courseForm: FormGroup;
-  @ViewChild('ngForm', { static: true }) ngForm: ElementRef<HTMLFormElement> | undefined;
+  image: any;
 
   constructor(
     private fb: FormBuilder,
@@ -39,15 +39,13 @@ export class AddcourseComponent {
       return;
     }
     const { name, level, description, image } = this.courseForm.value;
-
+    
     const formData = new FormData();
+    
     formData.append('name', name);
     formData.append('level', level);
     formData.append('description', description);
-    formData.append('image', image);
-
-    
-  console.log(formData);
+    formData.append('image', this.image);
 
     this.courseService.createCourse(formData).subscribe({
       next: (res: any) => {
@@ -58,5 +56,9 @@ export class AddcourseComponent {
         console.error('Error creating course:', error);
       },
     });
+  }
+
+  onStateChange(event: any) {
+    this.image = event.target.files[0];
   }
 }

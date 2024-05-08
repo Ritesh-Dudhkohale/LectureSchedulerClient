@@ -65,8 +65,6 @@ button:hover {
     margin-top: 4px;
 }
 
-
-
 @media (max-width: 600px) {
     form {
         max-width: 100%;

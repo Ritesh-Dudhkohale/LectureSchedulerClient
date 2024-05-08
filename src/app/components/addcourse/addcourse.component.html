@@ -1,6 +1,4 @@
 <div class="container">
-  <!-- course-form.component.html -->
-
   <form [formGroup]="courseForm" (ngSubmit)="submitForm()" #myForm="ngForm">
     <div>
       <label for="name">Course Name</label>
@@ -28,6 +26,8 @@
         type="file"
         id="image"
         formControlName="image"
+        (change)="onStateChange($event)"
+        accept=".jpg, .jpeg, .png"
         required
       />
     </div>

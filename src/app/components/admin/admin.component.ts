@@ -29,8 +29,8 @@ export class AdminComponent {
   currentUser: any;
 
   ngOnInit() {
-    this.getProfile();
     this.getCourse();
+    this.getProfile();
     this.getAllSchedule();
   }
 
@@ -58,8 +58,6 @@ export class AdminComponent {
     this.admin.getAllSchedule().subscribe({
       next: (res: any) => {
         this.schedules = res.data;
-        console.log(res.data);
-        
       },
       error: (err: any) => {
         console.error('Error creating course:', err);

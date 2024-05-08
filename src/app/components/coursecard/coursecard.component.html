@@ -4,6 +4,8 @@
     <h2 class="card-title">Name : {{ course.name }}</h2>
     <p class="card-level">Level: {{ course.level }}</p>
     <p class="card-description">Description: {{ course.description }}</p>
-    <button (click)="assignLecture()">Assign Lecture</button>
+    <button [routerLink]="['/assignLecture', course._id]">
+      Assign Lecture
+    </button>
   </div>
 </div>

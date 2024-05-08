@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Date } from 'mongoose';
 
 @Injectable({
   providedIn: 'root',
@@ -9,25 +10,27 @@ export class AdminService {
 
   private base_url = 'https://lectureschedulerserver.onrender.com/api/admins';
 
-  getAllIngetstructors() {
-    return this.http.get(`${this.base_url}/instructors`);
-  }
-
-  assignLecture() {
-    return this.http.get(`${this.base_url}/instructors`);
+  getAvailableInstructors(date: string) {
+    return this.http.get(`${this.base_url}/instructors/${date}`);
   }
 
   createCourse(courseData: any) {
     return this.http.post(`${this.base_url}/courses`, courseData);
   }
 
-  
-  getAllSchedule() {
+  getAllCourses() {
+    return this.http.get(`${this.base_url}/courses`);
+  }
+
+  getCourse(courseId: any) {
+    return this.http.get(`${this.base_url}/courses/${courseId}`);
+  }
+
+  assignLecture(data: any) {
     return this.http.get(`${this.base_url}/lectures`);
   }
 
-
-  getAllCourses() {
-    return this.http.get(`${this.base_url}/courses`);
+  getAllSchedule() {
+    return this.http.get(`${this.base_url}/lectures`);
   }
 }

@@ -8,6 +8,6 @@ import { httpInterceptor } from './utils/interceptor/http.interceptor';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
-    provideHttpClient(withInterceptors([httpInterceptor])),
+    provideHttpClient(withInterceptors([httpInterceptor]))
   ],
 };

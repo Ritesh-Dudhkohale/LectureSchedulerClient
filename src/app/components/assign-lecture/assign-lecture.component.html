@@ -1,0 +1,33 @@
+<button routerLink="/admin">Go Back</button>
+<div class="card-container">
+  <div class="course-info" *ngIf="course">
+    <img [src]="course.image" alt="{{ course.name }}" />
+    <div>
+      <h2>{{ course.name }}</h2>
+      <p>Level: {{ course.level }}</p>
+      <p>Description: {{ course.description }}</p>
+    </div>
+  </div>
+
+  <div class="assign-lecture">
+    <h3>Assign Lecture</h3>
+    <form [formGroup]="assignLectureForm" (ngSubmit)="assignLecture()">
+      <div class="form-group">
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" formControlName="date"
+        (change)="onDateChange($event)" required />
+      </div>
+      <div class="form-group">
+        <label for="instructorID">Select Instructor:</label>
+        <select id="instructorID" formControlName="instructorID" required>
+          @for(instructor of availableInstructors;track instructor.name) {
+          <option [value]="instructor._id">
+            {{ instructor.fullname | uppercase}}
+          </option>
+          }
+        </select>
+      </div>
+      <button type="submit">Assign Lecture</button>
+    </form>
+  </div>
+</div>

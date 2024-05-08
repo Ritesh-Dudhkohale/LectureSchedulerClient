@@ -38,7 +38,6 @@ export class LoginComponent {
         const user = JSON.parse(localStorage.getItem('Current User') as string);
 
         const userRole = user.role;
-        console.log(user.role);
 
         if (userRole === 'instructor') {
           this.router.navigateByUrl('/instructor');
@@ -48,6 +47,7 @@ export class LoginComponent {
       },
       error: (err) => {
         console.log(err);
+        alert(`User not logged In :- ${err.error.message}`);
       },
     });
   }
