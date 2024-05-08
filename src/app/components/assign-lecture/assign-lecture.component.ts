@@ -76,6 +76,8 @@ export class AssignLectureComponent {
         },
         error: (err) => {
           console.log(err);
+          alert(`Assignig lecture Failed :- ${err.error.message}`);
+          this.router.navigateByUrl('/admin');
         },
       });
   }
